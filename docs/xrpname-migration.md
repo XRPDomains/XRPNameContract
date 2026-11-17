@@ -1,6 +1,6 @@
 # XRPName adoption and migration
 
-**Status** Proposed deployment profile for the [XRPL native name service](community-review.md).
+**Status** Proposed deployment profile for the [XRPName Native Name Service Specification](SPEC.md).
 
 ## Preserve identity and wallet semantics
 

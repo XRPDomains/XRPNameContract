@@ -1,6 +1,11 @@
 # XRPName-Contract
 
-XRPName is a local proof of concept for a root-name registry on the XRPL native smart-contract runtime. It targets the experimental Bedrock node and the [XLS-101 draft](https://xls.xrpl.org/xls/XLS-0101-smart-contracts.html). The SDK supports the standalone profile in [networks/local.json](networks/local.json). The [community review draft](docs/community-review.md) proposes a general name-service protocol with ledger-managed TLDs. The second standalone milestone implements dynamic TLDs and keyed text and address records. See the [contract function reference](docs/contract-functions.md).
+XRPName-Contract prepares XRPName for XRPL native smart contracts under the XLS-101 draft. The goal is to make registration, ownership, payment records and verified primary names independently verifiable from the ledger. The current code is a standalone implementation of registration, dynamic TLDs, text and receiving-address records.
+
+- [Protocol specification](docs/SPEC.md) covers contract organization, on-chain authority, lifecycle, read/write semantics and release criteria.
+- [Community review](docs/community-review.md) lists questions and conformance cases.
+- [Standalone function reference](docs/contract-functions.md) documents the compiled ABI and actual storage format.
+- [XRPName migration](docs/xrpname-migration.md) covers existing names and XLS-20 ownership.
 
 ## Build and test
 
@@ -15,7 +20,7 @@ bedrock abi inspect contract/build/abi.json
 bedrock doc --output .local/abi-doc
 ```
 
-The deployable binary is `contract/target/wasm32v1-none/release/xrpname_contract.wasm`. The offline suite instantiates it with host stubs, checks the exports against the ABI, runs XahauName-derived vectors, exercises the pinned transaction codec, and checks the SDK's validated-ledger read path with a loopback fixture.
+The deployable binary is `contract/target/wasm32v1-none/release/xrpname_contract.wasm`. The offline suite instantiates it with host stubs, checks the exports against the ABI, runs normalization, authority and storage boundary vectors, exercises the pinned transaction codec, and checks the SDK's validated-ledger read path with a loopback fixture.
 
 [Bedrock](https://github.com/XRPL-Commons/bedrock) revision `ff657ad24e5e4956f8eb2a7b63233551f2698f5a` generates the ABI reference from Rust annotations and inspects the checked-in ABI. Its `build` command selects `wasm32-unknown-unknown` for contracts. The tested node rejected that artifact during module loading. The commands above select the WebAssembly MVP target explicitly. The Rust host bindings come from [Craft](https://github.com/Transia-RnD/craft/tree/ffbe88da26df27e59a72b6202883f42f696933cc) revision `ffbe88da26df27e59a72b6202883f42f696933cc`. The transaction codec comes from `@xrpl-commons/xrpl@4.6.0`.
 
@@ -57,10 +62,6 @@ Create an `XRPNameClient` with `{ rpcUrl, contractAccount }` and an optional `Si
 The SDK exposes registration, ownership, text and receiving-address lookup, record updates and clearing, and TLD discovery and administration. The [function reference](docs/contract-functions.md) lists the full SDK, ABI, state layout, deployment parameter order and errors. The contract derives owner authority from transaction Account. Writes use the pinned local fee, computation allowance and wrapped Parameters STArray elements.
 
 Reads request ledger_entry at the validated ledger and verify the identity of ContractData. The original standalone run is available in [deployments/local.json](deployments/local.json), and the current milestone has a separate evidence file.
-
-## XahauName compatibility
-
-The business reference is XahauName revision `7968d7fe2e28d1cc4b6b594c44cd538271150b1d`, especially `docs/SPEC.md`, XNIP-0001 and XNIP-0002, `hook/src/common.h`, the issuance and set-text handlers, `packages/sdk/src/protocol.ts`, and the Hook validation and SDK tests. See [the compatibility notes](docs/compatibility.md) for the decisions and the vectors used.
 
 ## Before mainnet
 

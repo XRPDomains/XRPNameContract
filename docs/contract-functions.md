@@ -1,6 +1,6 @@
 # Contract function reference
 
-This reference covers the second standalone milestone. The [community review draft](community-review.md) covers the broader name-service protocol. The [migration profile](xrpname-migration.md) covers how XRPName could adopt it for existing XLS-20 names. Use the [ABI](../contract/build/abi.json) for transaction signing and the [README](../README.md) for node setup and tests.
+This reference covers the second standalone milestone. The [protocol specification](SPEC.md) covers the production design and proposed operations. The [migration profile](xrpname-migration.md) covers how XRPName could adopt it for existing XLS-20 names. Use the [ABI](../contract/build/abi.json) for transaction signing and the [README](../README.md) for node setup and tests.
 
 ## Names and authority
 
@@ -71,8 +71,6 @@ There can be up to 15 text and 15 address records per name, with a combined valu
 | `-40` | Sender lacks TLD administration authority |
 | `-62` | Record count or serialized capacity exhausted |
 
-## Relation to XahauName
-
-The implementation follows XahauName's normalized name and text keys, distinct owner and receiving records, bounded record sets, and issuance-only pause. XRPL native state packs a name's records into one value, so an index and separate descriptor slots are unnecessary for this layout. Binary coin types are transmitted as two bytes, matching the supported range. XahauName transports the same range using four bytes.
+## Deployment scope
 
 XLS-20 ownership adoption, primary, transfer, burn, paid issuance, profile batching and reconciliation belong to future milestones. Global `ContractData` size, reserve exhaustion and in-place deployment upgrades need further testing before production.
