@@ -1,0 +1,17 @@
+[package]
+name = "xrpname-contract"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+xrpl-wasm-std = { git = "https://github.com/Transia-RnD/craft.git", rev = "ffbe88da26df27e59a72b6202883f42f696933cc" }
+xrpl-wasm-macros = { git = "https://github.com/Transia-RnD/craft.git", rev = "ffbe88da26df27e59a72b6202883f42f696933cc" }
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = "abort"

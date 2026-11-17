@@ -1,0 +1,19 @@
+{
+  "name": "xrpname-contract",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "probe": "npm run build && node scripts/probe.mjs",
+    "poc": "npm run build && node scripts/poc.mjs"
+  },
+  "dependencies": {
+    "@xrpl-commons/xrpl": "4.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.3",
+    "typescript": "5.8.3"
+  }
+}

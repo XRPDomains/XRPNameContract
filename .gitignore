@@ -1,0 +1,11 @@
+/contract/target/
+/sdk/dist/
+/node_modules/
+/.local/
+/.wallets/
+/.bedrock/*
+!/.bedrock/node-config/
+*.wasm
+.env
+.env.*
+*.log

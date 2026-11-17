@@ -1,0 +1,162 @@
+{
+  "networkId": 100,
+  "nodeVersion": "3.2.0-b0",
+  "nodeImage": "lejamon/rippled_smart_contract_vault_x86@sha256:00c9d5c3fd15f148324ab8f464ef6e9974ea2173c68243c525ae145023f4ec75",
+  "amendment": "10B82F38F942755745FF9C873C7642203DA332F9B1A0E78B43524DECEB32EA42",
+  "wasmSha256": "56dd15d6374ccff0f38a176b93fdb00a7e5c557b8b925e36912d2f0d97c8d8a7",
+  "contractAccount": "rLV89Y69kUWXRyGekWR5k3hfQLLVb4yAoE",
+  "owner": "rsF7xYyWj6A1EfQouzsrS59XXAqYnGUJxz",
+  "other": "rPBH2ixfkENfkQAYZRRtiVGmFdhJ2gwCiQ",
+  "deploy": {
+    "hash": "E631CF83CD403F2DB06EED2507486CD4F408490EE720EDA683EE3B4FFDDBF0D0",
+    "ledgerIndex": 78
+  },
+  "funding": [
+    {
+      "hash": "0562D01BC1FA1FD489E68B5B20B4DE1A45C22373A6BEBFE7BD9CA0CDEBF3D286",
+      "ledgerIndex": 76
+    },
+    {
+      "hash": "A9A2BD6420EEF0532CE5CA619372E8C98316128B568276D09DABCF69A1768E20",
+      "ledgerIndex": 77
+    }
+  ],
+  "registration": {
+    "hash": "EE392944B3C14CA28E684C4E1FB18156ACFDA79C71D2D4EE3B68F295C4E8C25E",
+    "ledgerIndex": 80
+  },
+  "update": {
+    "hash": "427E7E5EC8EA0AF9E8EA92EEF730D61004E8D91B2BF19CBF2DDDE61BF173E017",
+    "ledgerIndex": 81
+  },
+  "failures": {
+    "invalidName": {
+      "hash": "4286255E3BA371FDCF85E2BDB94E6A088BDC27126EE1ADD6B4E9A0B0F047C7A8",
+      "ledgerIndex": 82,
+      "result": "tecWASM_REJECTED",
+      "code": -10
+    },
+    "duplicate": {
+      "hash": "8948CC55FBDD95065EF544624767EB2830F44F4A58C1EA42445758729155EC7C",
+      "ledgerIndex": 84,
+      "result": "tecWASM_REJECTED",
+      "code": -31
+    },
+    "unauthorized": {
+      "hash": "0CE7545C3F3F21D26311EA90F0029DAA40B0AAF2217B26DB2A7D9D9470AED3E6",
+      "ledgerIndex": 85,
+      "result": "tecWASM_REJECTED",
+      "code": -12
+    },
+    "missingName": {
+      "hash": "68A0D2794C47553B17FEE7D798C5AFFCD2C049B9583DE2842D4867D1548200C3",
+      "ledgerIndex": 87,
+      "result": "tecWASM_REJECTED",
+      "code": -11
+    },
+    "invalidUtf8": {
+      "hash": "656DA547665A7EA86DAA76B6A37065F9704A98161345CE07D2EECF8BBE9AF37B",
+      "ledgerIndex": 88,
+      "result": "tecWASM_REJECTED",
+      "code": -3
+    }
+  },
+  "competingRegistrations": [
+    {
+      "hash": "183C382C17859594AD142B6E9EB4D8E81216E23082E02E58739B2C2AAB24770F",
+      "ledgerIndex": 90,
+      "account": "rsF7xYyWj6A1EfQouzsrS59XXAqYnGUJxz",
+      "result": "tecWASM_REJECTED",
+      "code": -31
+    },
+    {
+      "hash": "594FEB20F238A8490784ED7FBF16D8ABB708EAEA7EABFA3419F9F12076C1B63F",
+      "ledgerIndex": 90,
+      "account": "rPBH2ixfkENfkQAYZRRtiVGmFdhJ2gwCiQ",
+      "result": "tesSUCCESS"
+    }
+  ],
+  "extension": {
+    "unknownTld": {
+      "hash": "74FE40B829B823651E4FA83326B538458A7D1EFA4FBFF6F487D12FBB3A765D11",
+      "ledgerIndex": 91,
+      "result": "tecWASM_REJECTED",
+      "code": -33
+    },
+    "unauthorizedTld": {
+      "hash": "3729CC8285C9214A07011EB1A78749B60B2019FE44C980E8390A0EAA36368125",
+      "ledgerIndex": 92,
+      "result": "tecWASM_REJECTED",
+      "code": -40
+    },
+    "addTld": {
+      "hash": "C7417ACFA91AD7071D58205CE0715CE467C846921754C765E39C4575501AE09F",
+      "ledgerIndex": 93
+    },
+    "duplicateTld": {
+      "hash": "EC362371E021AB5288C6AD0D29D2A24EDAC71DFCD0FEE6B5855A4124FBC76348",
+      "ledgerIndex": 94,
+      "result": "tecWASM_REJECTED",
+      "code": -31
+    },
+    "unauthorizedStatus": {
+      "hash": "BF408980A759F5E79BEA52BBDFCE7131395F42D5584D3A57D784D4E0A7632CAC",
+      "ledgerIndex": 95,
+      "result": "tecWASM_REJECTED",
+      "code": -40
+    },
+    "sameLabel": {
+      "hash": "644AE7B0C433A3B4267F784C52905E5964898666AD4983458066EB1352F7F65C",
+      "ledgerIndex": 97
+    },
+    "pauseTld": {
+      "hash": "0D993A4C62A8E4FB5A4D013A7E5A2EF709A60DC51FECBBB035A932FEA165367C",
+      "ledgerIndex": 98
+    },
+    "paused": {
+      "hash": "1523251671CC8186740C7AE9E5EE0D449DBB384EC403E505CBC4E29426383AF2",
+      "ledgerIndex": 99,
+      "result": "tecWASM_REJECTED",
+      "code": -33
+    },
+    "textWhilePaused": {
+      "hash": "56D6C6AF51D63F3C6D4829D834A07F08795C35129032CF64A725B3AC59B1ECCE",
+      "ledgerIndex": 101
+    },
+    "resumeTld": {
+      "hash": "C049A2752BFAB0B0AEAD9119511189ED5B9BDF79CA09BD0CB097203E1E47F3FA",
+      "ledgerIndex": 102
+    },
+    "registryResumed": {
+      "hash": "6B92706984EDA663174516CEFB313734D016E9E8C2054D146147C588EA53D9FB",
+      "ledgerIndex": 103
+    },
+    "setText": {
+      "hash": "D3EB132E781124C61AEFBBEB273B64E031B604EE829CD5C7D7F41B6D39B843AB",
+      "ledgerIndex": 104
+    },
+    "setAddress": {
+      "hash": "E5D9AEEE16A12E2F41B325F4F0F9EA9F56A502A923C9653D9FAD855A27FCC1C6",
+      "ledgerIndex": 105
+    },
+    "unauthorizedClear": {
+      "hash": "5C0646CA1459037E6D76FB985A5A9163EFE5A22158110A92F3AD949B0D543D78",
+      "ledgerIndex": 107,
+      "result": "tecWASM_REJECTED",
+      "code": -12
+    },
+    "clearText": {
+      "hash": "0163EEAD6F20EB09B81A547E194FBC4B0D4F23B6ECDB9DB51AD64D3A93B0486E",
+      "ledgerIndex": 108
+    },
+    "clearAddress": {
+      "hash": "E068331AAB83B4AF80E6447847B3CCFDDDE9FB1E6161E2DC393ED8096E32EEAB",
+      "ledgerIndex": 109
+    }
+  },
+  "readBack": {
+    "name": "alice.xrp",
+    "owner": "rsF7xYyWj6A1EfQouzsrS59XXAqYnGUJxz",
+    "description": "XRPName • thử nghiệm"
+  }
+}

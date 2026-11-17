@@ -1,0 +1,26 @@
+primitives = ["contract"]
+
+[project]
+name = "xrpname"
+version = "0.1.0"
+
+[build]
+source = "contract/src/lib.rs"
+output = "contract/target/wasm32v1-none/release"
+target = "wasm32v1-none"
+
+[local_node]
+config_dir = ".bedrock/node-config"
+docker_image = "lejamon/rippled_smart_contract_vault_x86@sha256:00c9d5c3fd15f148324ab8f464ef6e9974ea2173c68243c525ae145023f4ec75"
+ledger_interval = 1000
+
+[networks.local]
+url = "ws://127.0.0.1:6006"
+network_id = 100
+
+[contracts.main]
+source = "contract/src/lib.rs"
+abi = "contract/build/abi.json"
+
+[wallets]
+keystore = ".wallets/keystore.json"

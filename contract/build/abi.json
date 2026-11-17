@@ -1,0 +1,125 @@
+{
+  "contract_name": "xrpname",
+  "functions": [
+    {
+      "name": "register",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "VL",
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "name": "set_text",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "VL",
+          "flag": 0
+        },
+        {
+          "name": "value",
+          "type": "VL",
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "name": "set_text_record",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "VL",
+          "flag": 0
+        },
+        {
+          "name": "key",
+          "type": "VL",
+          "flag": 0
+        },
+        {
+          "name": "value",
+          "type": "VL",
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "name": "clear_text",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "VL",
+          "flag": 0
+        },
+        {
+          "name": "key",
+          "type": "VL",
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "name": "set_address",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "VL",
+          "flag": 0
+        },
+        {
+          "name": "coin",
+          "type": "VL",
+          "flag": 0
+        },
+        {
+          "name": "value",
+          "type": "VL",
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "name": "clear_address",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "VL",
+          "flag": 0
+        },
+        {
+          "name": "coin",
+          "type": "VL",
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "name": "add_tld",
+      "parameters": [
+        {
+          "name": "suffix",
+          "type": "VL",
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "name": "set_tld_status",
+      "parameters": [
+        {
+          "name": "suffix",
+          "type": "VL",
+          "flag": 0
+        },
+        {
+          "name": "enabled",
+          "type": "VL",
+          "flag": 0
+        }
+      ]
+    }
+  ]
+}

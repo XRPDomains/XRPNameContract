@@ -1,0 +1,7 @@
+{
+  "rpcUrl": "http://127.0.0.1:5005",
+  "networkId": 100,
+  "buildVersion": "3.2.0-b0",
+  "smartContractAmendment": "10B82F38F942755745FF9C873C7642203DA332F9B1A0E78B43524DECEB32EA42",
+  "nodeImage": "lejamon/rippled_smart_contract_vault_x86@sha256:00c9d5c3fd15f148324ab8f464ef6e9974ea2173c68243c525ae145023f4ec75"
+}
